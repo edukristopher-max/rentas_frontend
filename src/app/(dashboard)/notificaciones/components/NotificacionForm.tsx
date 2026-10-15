@@ -108,7 +108,7 @@ export default function NotificacionForm({ onSuccess, onCancel }: NotificacionFo
             <option value={0} disabled>-- Selecciona un Contribuyente --</option>
             {contribuyentes.map((c) => (
               <option key={c.id} value={c.id}>
-                {c.nombreCompletoRazonSocial} ({c.documentoIdentidad})
+                {c.nombreCompletoRazonSocial} ({c.numeroDocumento})
               </option>
             ))}
           </select>

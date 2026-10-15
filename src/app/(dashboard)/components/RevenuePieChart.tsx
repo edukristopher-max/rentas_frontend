@@ -28,7 +28,7 @@ export default function RevenuePieChart({ data }: Props) {
           </Pie>
           <Tooltip 
             contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)' }}
-            formatter={(value: number) => [`S/ ${value.toFixed(2)}`, "Monto"]}
+            formatter={(value: any) => [`S/ ${Number(value || 0).toFixed(2)}`, "Monto"]}
           />
           <Legend iconType="circle" verticalAlign="bottom" height={36} />
         </PieChart>

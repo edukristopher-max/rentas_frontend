@@ -37,7 +37,7 @@ export default function RevenueBarChart({ data }: Props) {
           <Tooltip 
             cursor={{ fill: '#f3f4f6' }}
             contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)' }}
-            formatter={(value: number) => [`S/ ${value.toFixed(2)}`, ""]}
+            formatter={(value: any) => [`S/ ${Number(value || 0).toFixed(2)}`, ""]}
           />
           <Legend iconType="circle" wrapperStyle={{ paddingTop: '20px' }} />
           <Bar dataKey="recaudado" name="Recaudación" fill="#10b981" radius={[4, 4, 0, 0]} barSize={32} />

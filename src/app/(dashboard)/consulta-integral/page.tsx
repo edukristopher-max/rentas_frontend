@@ -8,7 +8,7 @@ import {
   ChevronDown, Printer, Plus, Info, LayoutList, Landmark
 } from 'lucide-react';
 
-export default function ConsultaIntegralPage() {
+function ConsultaIntegralContent() {
   const searchParams = useSearchParams();
   const initialSearch = searchParams.get('search') || '';
 
@@ -626,5 +626,13 @@ export default function ConsultaIntegralPage() {
       )}
 
     </div>
+  );
+}
+
+export default function ConsultaIntegralPage() {
+  return (
+    <React.Suspense fallback={<div className="p-8 text-center text-slate-500">Cargando consulta integral...</div>}>
+      <ConsultaIntegralContent />
+    </React.Suspense>
   );
 }
